@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спортивне харчування</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="img/logo.png" alt="Спортивне харчування" width="40" height="40" class="d-inline-block align-text-top">
+                MusclePower
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-page="home" href="#home">Головна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-page="catalog" href="#catalog">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-page="game" href="#game">Гра</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-page="about" href="#about">Про нас</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <input class="form-control me-2" type="search" id="searchInput" placeholder="Пошук товарів" aria-label="Search">
+                    <button class="btn btn-outline-success" id="searchBtn">Знайти</button>
+                </div>
+                <div class="ms-3 user-greeting text-light"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4 mb-5">
+        <div class="page-content" id="home-content">
+            <div class="jumbotron bg-light p-5 rounded mb-4">
+                <h1 class="display-4">Спортивне харчування для вашого успіху</h1>
+                <p class="lead">Досягайте найкращих результатів з нашими високоякісними продуктами!</p>
+                <hr class="my-4">
+                <p>Введіть своє ім'я для персоналізованого досвіду:</p>
+                <div class="input-group mb-3 w-50">
+                    <input type="text" class="form-control" id="userName" placeholder="Ваше ім'я">
+                    <button class="btn btn-primary" id="userNameBtn">Зберегти</button>
+                </div>
+                <a class="btn btn-success btn-lg" href="#catalog" role="button">Перейти до каталогу</a>
+            </div>
+            
+            <h2 class="mb-4">Популярні категорії</h2>
+            <div class="row categories-container">
+            </div>
+        </div>
+
+        <div class="page-content" id="catalog-content" style="display: none;">
+            <h1 class="mb-4">Каталог продуктів</h1>
+            
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="list-group category-list">
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <h2 class="category-title mb-3">Оберіть категорію</h2>
+                    <div class="row products-container">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel">Деталі продукту</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img src="" class="product-detail-img img-fluid" alt="Продукт">
+                            </div>
+                            <div class="col-md-7">
+                                <h3 class="product-detail-title"></h3>
+                                <p class="product-detail-description"></p>
+                                <p class="product-detail-price fw-bold"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-content" id="game-content" style="display: none;">
+            <h1 class="mb-4">Гра "Прокачайся! А то виглядаєш як дрищ!"</h1>
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Лови протеїн і уникай бургери!</h5>
+                            <p class="card-text">Кожні 5 очків - ти зростаєш як чоловік!</p>
+                            
+                            <div class="alert alert-info mb-3">
+                                <strong>Правила гри:</strong>
+                                <ul class="mb-0 text-start">
+                                    <li>Лови протеїн для додаткових очків (+1)</li>
+                                    <li>Уникай бургерів, вони забирають очки (-1)</li>
+                                    <li>Кожні 5 очків - ти зростаєш як чоловік!</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="game-container my-4" id="game-container">
+                                <div class="game-character">
+                                    <img src="game/stage1.png" id="character-image" class="img-fluid" alt="Персонаж">
+                                </div>
+                                <div class="progress mt-3">
+                                    <div id="progress-bar" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="mt-3">
+                                    <label for="satiety-bar" class="form-label mb-2">Полоска ситності:</label>
+                                    <div class="progress">
+                                        <div id="satiety-bar" class="progress-bar bg-info" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <span id="click-count">0</span> очків
+                                </div>
+                                <div class="mt-3">
+                                    <button id="reset-button" class="btn btn-danger btn-lg">Почати заново</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-content" id="about-content" style="display: none;">
+            <h1 class="mb-4">Про нас</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Наша місія</h3>
+                    <p>Ми прагнемо надавати найякісніші продукти спортивного харчування для допомоги спортсменам та ентузіастам фітнесу досягати своїх цілей. Ми віримо, що правильне харчування є ключовим фактором успіху в спорті та здоровому способі життя.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Наші цінності</h3>
+                    <ul>
+                        <li>Якість та безпека продукції</li>
+                        <li>Клієнтоорієнтованість</li>
+                        <li>Інновації та розвиток</li>
+                        <li>Відповідальність та прозорість</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>MusclePower</h5>
+                    <p>Спортивне харчування для досягнення ваших цілей!</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Контакти</h5>
+                    <p>Телефон: +380 99 123 4567</p>
+                    <p>Email: info@musclepower.ua</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Команда розробників</h5>
+                    <div>
+                       <li>Бернацький Євген Олегович</li>
+                       <li>Атаманюк Владислав Тарасович</li>
+                       <li>Бащук Ростислав Юрійович</li>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 MusclePower. Всі права захищені.</p>
+                <p>Розроблено для демонстрації роботи односторінкового веб-застосунку.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
