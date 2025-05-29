@@ -1,0 +1,38 @@
+[
+    {
+        "id": "protein",
+        "name": "Протеїни",
+        "description": "Протеїнові суміші для набору м'язової маси та відновлення після тренувань.",
+        "image": "img/categories/protein.jpg"
+    },
+    {
+        "id": "bcaa",
+        "name": "BCAA та амінокислоти",
+        "description": "Амінокислоти з розгалуженими ланцюгами для швидкого відновлення та росту м'язів.",
+        "image": "img/categories/bcaa.jpg"
+    },
+    {
+        "id": "creatine",
+        "name": "Креатин",
+        "description": "Добавки креатину для збільшення силових показників та витривалості.",
+        "image": "img/categories/creatine.png"
+    },
+    {
+        "id": "gainers",
+        "name": "Гейнери",
+        "description": "Високоенергетичні суміші для швидкого набору ваги та м'язової маси.",
+        "image": "img/categories/gainers.png"
+    },
+    {
+        "id": "vitamins",
+        "name": "Вітаміни та мінерали",
+        "description": "Комплекси вітамінів та мінералів для підтримки загального здоров'я та імунітету.",
+        "image": "img/categories/vitamins.png"
+    },
+    {
+        "id": "preworkout",
+        "name": "Передтренувальні комплекси",
+        "description": "Енергетичні добавки для підвищення інтенсивності тренувань та фокусу.",
+        "image": "img/categories/preworkout.png"
+    }
+]
